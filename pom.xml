@@ -19,6 +19,7 @@
         <mysql.version>8.0.13</mysql.version>
         <slf4j.version>1.8.0-beta2</slf4j.version>
         <spring.version>5.1.4.RELEASE</spring.version>
+        <dom4j.version>2.1.1</dom4j.version>
     </properties>
 
     <dependencies>
@@ -84,6 +85,7 @@
             <version>${slf4j.version}</version>
         </dependency>
 
+        <!-- spring dependency -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -93,6 +95,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+
+        <!-- xml dependency -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${dom4j.version}</version>
         </dependency>
     </dependencies>
 

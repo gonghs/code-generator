@@ -27,6 +27,7 @@ import com.baomidou.mybatisplus.generator.InjectionConfig
  * @since 2019-01-11 17:49
  */
 object GeneratorRun {
+
     fun scanner(tip: String): String? {
         val scanner = Scanner(System.`in`)
         println("请输入$tip:")
@@ -63,7 +64,7 @@ fun main(args: Array<String>) {
 
     //包配置
     val pc = PackageConfig()
-    pc.moduleName = scanner("模块名")
+//    pc.moduleName = scanner("模块名")
     pc.parent = "ice.maple"
     mpg.packageInfo = pc
 
@@ -92,22 +93,21 @@ fun main(args: Array<String>) {
     val templateConfig = TemplateConfig()
 
     // 配置自定义输出模板
-    // templateConfig.setEntity();
+    templateConfig.setEntityKt("src/main/resources/template/entity.kt");
     // templateConfig.setService();
-    // templateConfig.setController();
-
-    templateConfig.xml = null
+    templateConfig.controller = null;
+//    templateConfig.xml = null
     mpg.template = templateConfig
 
     // 策略配置
     val strategy = StrategyConfig()
     strategy.naming = NamingStrategy.underline_to_camel
     strategy.columnNaming = NamingStrategy.underline_to_camel
-    strategy.superEntityClass = "com.baomidou.ant.common.BaseEntity"
+//    strategy.superEntityClass = "com.baomidou.ant.common.BaseEntity"
     strategy.isEntityLombokModel = true
     strategy.isRestControllerStyle = true
-    strategy.superControllerClass = "com.baomidou.ant.common.BaseController"
-    strategy.setInclude(scanner("表名"))
+//    strategy.superControllerClass = "com.baomidou.ant.common.BaseController"
+    strategy.setInclude("user","role")
     strategy.setSuperEntityColumns("id")
     strategy.isControllerMappingHyphenStyle = true
     strategy.setTablePrefix(pc.moduleName + "_")
