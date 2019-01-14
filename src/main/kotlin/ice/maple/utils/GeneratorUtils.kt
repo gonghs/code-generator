@@ -102,9 +102,4 @@ object GeneratorUtils{
         autoGenerator.templateEngine = FreemarkerTemplateEngine()
         autoGenerator.execute()
     }
-
-    @JvmStatic
-    fun main(args: Array<String>) {
-        GeneratorUtils.build().execute()
-    }
 }
