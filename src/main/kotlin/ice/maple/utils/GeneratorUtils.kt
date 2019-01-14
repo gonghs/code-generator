@@ -9,7 +9,7 @@ import ice.maple.enums.*
 import java.util.*
 
 /**
- * TODO
+ * 代码生成器工具类
  *
  * @author maple
  * @version V1.0

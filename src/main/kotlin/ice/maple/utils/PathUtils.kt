@@ -3,7 +3,7 @@ package ice.maple.utils
 import java.net.URLDecoder
 
 /**
- * TODO
+ * 获取路径工具类
  *
  * @author maple
  * @version V1.0

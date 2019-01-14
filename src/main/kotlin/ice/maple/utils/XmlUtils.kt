@@ -8,7 +8,7 @@ import java.io.IOException
 import javax.swing.text.Document
 
 /**
- * TODO
+ * xml解析相关工具类
  *
  * @author maple
  * @version V1.0
